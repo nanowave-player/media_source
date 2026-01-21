@@ -1,10 +1,10 @@
-mod duration_millis;
-mod media_source_chapter;
-mod media_source_image_codec;
-mod media_source_item;
-mod media_source_metadata;
-mod media_source_picture;
-mod media_type;
+pub mod duration_millis;
+pub mod media_source_chapter;
+pub mod media_source_image_codec;
+pub mod media_source_item;
+pub mod media_source_metadata;
+pub mod media_source_picture;
+pub mod media_type;
 
 /*
 #[cfg(test)]
