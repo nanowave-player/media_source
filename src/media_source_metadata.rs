@@ -1,7 +1,8 @@
+use serde::{Deserialize, Serialize};
 use crate::media_source_chapter::MediaSourceChapter;
 use crate::media_source_picture::MediaSourcePicture;
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MediaSourceMetadata {
     // option is important here, because empty can be the real value as well as unset values, which are None
     pub artist: Option<String>,

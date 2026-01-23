@@ -1,6 +1,7 @@
+use serde::{Deserialize, Serialize};
 use crate::media_source_image_codec::MediaSourceImageCodec;
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MediaSourcePicture {
     pub cache_dir: String,
     pub hash: String,

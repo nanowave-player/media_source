@@ -1,7 +1,8 @@
+use serde::{Deserialize, Serialize};
 use crate::media_source_metadata::MediaSourceMetadata;
 use crate::media_type::MediaType;
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MediaSourceItem {
     pub id: String,
     pub location: String,
