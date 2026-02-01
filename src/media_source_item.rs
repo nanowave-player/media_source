@@ -10,3 +10,16 @@ pub struct MediaSourceItem {
     pub media_type: MediaType,
     pub metadata: MediaSourceMetadata,
 }
+
+impl MediaSourceItem {
+    pub fn empty() -> Self {
+        Self {
+            id: String::from(""),
+            location: String::from(""),
+            title: String::from(""),
+            media_type: MediaType::Unspecified,
+            metadata: MediaSourceMetadata::empty()
+        }
+    }
+
+}

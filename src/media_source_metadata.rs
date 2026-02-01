@@ -40,4 +40,18 @@ impl MediaSourceMetadata {
             chapters,
         }
     }
+
+    pub fn empty() -> Self {
+        Self {
+            artist: None,
+            title: None,
+            album: None,
+            genre: None,
+            composer: None,
+            series: None,
+            part: None,
+            cover: None,
+            chapters: vec![],
+        }
+    }
 }
