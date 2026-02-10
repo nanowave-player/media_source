@@ -6,7 +6,8 @@ pub mod media_source_history_item;
 pub mod media_source_metadata;
 pub mod media_source_picture;
 pub mod media_type;
-mod media_source_session_key;
+pub mod media_source_session_key;
+
 /*
 #[cfg(test)]
 mod tests {
