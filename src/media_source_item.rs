@@ -1,3 +1,4 @@
+use std::time::Duration;
 use serde::{Deserialize, Serialize};
 use crate::media_source_history_item::MediaSourceHistoryItem;
 use crate::media_source_metadata::MediaSourceMetadata;
@@ -10,6 +11,7 @@ pub struct MediaSourceItem {
     pub title: String,
     pub media_type: MediaType,
     pub metadata: MediaSourceMetadata,
+    pub position: Option<Duration>,
     pub history: Vec<MediaSourceHistoryItem>,
 }
 
@@ -21,6 +23,7 @@ impl MediaSourceItem {
             title: String::from(""),
             media_type: MediaType::Unspecified,
             metadata: MediaSourceMetadata::empty(),
+            position: None,
             history: vec![],
         }
     }
