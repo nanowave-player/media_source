@@ -1,5 +1,5 @@
 use std::time::{SystemTime, UNIX_EPOCH};
-use rand::distributions::{Alphanumeric, DistString};
+use rand::distr::{Alphanumeric, SampleString};
 use serde::{Deserialize, Serialize};
 
 const SESSION_KEY_MAX_AGE: u128 = 1000 * 60 * 30; // 30 mins
@@ -30,7 +30,7 @@ impl MediaSourceSessionKey {
     }
 
     pub fn key() -> String {
-        Alphanumeric.sample_string(&mut rand::thread_rng(), 16)
+        Alphanumeric.sample_string(&mut rand::rng(), 16)
     }
 
     pub fn extend_validity(&mut self) {
